@@ -23,11 +23,13 @@ const exercisesRouter = require('./routes/exercises');
 const usersRouter = require('./routes/users');
 const meetsRouter = require('./routes/meets');
 const roomsRouter = require('./routes/rooms');
+const floorsRouter = require('./routes/floors');
 
 app.use('/exercises', exercisesRouter);
 app.use('/users', usersRouter);
 app.use('/meets', meetsRouter);
 app.use('/rooms', roomsRouter);
+app.use('/floors', floorsRouter);
 
 app.listen(port, () => {
     console.log(`server is running on port ${port}`);
