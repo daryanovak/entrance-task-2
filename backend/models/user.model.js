@@ -3,15 +3,13 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-    username: {
-        type: String,
-        required: true,
-        unique: true,
-        trim: true,
-        minlength: 3,
-    },
-}, {
-    timestamps: true,
+    _id: mongoose.Schema.Types.ObjectId,
+    userName: String,
+    email: String, 
+    meetings: [ { 
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: 'Meet'
+    }]
 });
 
 const User = mongoose.model('User', userSchema);

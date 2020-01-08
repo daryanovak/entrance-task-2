@@ -8,6 +8,7 @@ const roomSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId, 
         ref: 'Floor'
     },
+    number:  { type : Number },
     title: String,
     capacity: Number, 
 });
